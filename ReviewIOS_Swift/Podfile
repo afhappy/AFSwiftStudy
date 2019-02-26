@@ -1,0 +1,36 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+
+target 'CustomNotification' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for CustomNotification
+
+end
+
+target 'ReviewIOS_Swift' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ReviewIOS_Swift
+	# json转model
+	pod 'HandyJSON', '~> 4.2.1'
+	# 网络加载
+	pod 'Alamofire', '~> 4.8.1'
+	# 刷新加载
+	pod 'MJRefresh', '~> 3.1.15.7'
+	# 图片加载
+	pod 'Kingfisher', '~> 5.1.1'
+
+  target 'ReviewIOS_SwiftTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ReviewIOS_SwiftUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
