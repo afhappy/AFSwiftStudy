@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="RISHomeViewController" id="BYZ-38-t0r" customClass="RISHomeViewController" customModule="ReviewIOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="StG-PI-Hvc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="5H2-ge-yJh"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Qh1-GN-zjf"/>
+                                </connections>
+                            </tableView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cPH-1d-2ia">
+                                <rect key="frame" x="0.0" y="248" width="375" height="171"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="StG-PI-Hvc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3ac-1b-BfO"/>
+                            <constraint firstItem="StG-PI-Hvc" firstAttribute="bottom" secondItem="gFY-ed-a3j" secondAttribute="bottom" id="9Yu-gx-OmA"/>
+                            <constraint firstItem="StG-PI-Hvc" firstAttribute="leading" secondItem="gFY-ed-a3j" secondAttribute="leading" id="GuL-9g-VIK"/>
+                            <constraint firstItem="StG-PI-Hvc" firstAttribute="trailing" secondItem="gFY-ed-a3j" secondAttribute="trailing" id="Wv6-vw-6IR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gFY-ed-a3j"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainTable" destination="StG-PI-Hvc" id="Siu-0b-5cv"/>
+                        <outlet property="textView" destination="cPH-1d-2ia" id="Bbt-Sb-H9X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="80.50974512743629"/>
+        </scene>
+    </scenes>
+</document>
